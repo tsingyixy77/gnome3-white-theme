@@ -857,11 +857,11 @@ toolbar, .inline-toolbar {
 
 .primary-toolbar:not(.libreoffice-toolbar) {
   color: #ffffff;
-  background-color: #1b2224;
+  background-color: #eee;
   box-shadow: none;
   border-width: 0 0 1px 0;
   border-style: solid;
-  border-image: linear-gradient(to bottom, #1b2224, #0c0f10) 1 0 1 0; }
+  border-image: linear-gradient(to bottom, #1b2224, #eee) 1 0 1 0; }
 
 .inline-toolbar {
   background-color: alpha(#efefef, 0.00);
@@ -1078,10 +1078,10 @@ window > .titlebar:not(headerbar), window > .titlebar:not(headerbar):backdrop, w
   }
   .primary-toolbar button:backdrop, headerbar button:backdrop {
     opacity: 0.7; }
-  .primary-toolbar button:hover, headerbar button:hover {
+  .primary-toolbar button:hover, headerbar button:hover headerbar image:hover {
     color: #000;
-	border-color: red;
-	border-top-width: 15px;
+	border-color: #2eb398;
+	border-top-width: 10px;
 	box-shadow: inset 1px 2px 3px #aaa;
     background-color: #eee; }
   .primary-toolbar button:active, headerbar button:active, .primary-toolbar button:checked, headerbar button:checked {
@@ -4342,4 +4342,75 @@ filechooser placessidebar.sidebar scrollbar,
 .path-bar label {
 	/*font-family:space Age,Regular;*/
 	  font-family:Helvetica,regular;
+}
+/***********
+ * Sidebar左侧边栏 *
+ ***********/
+.sidebar,
+.sidebar .view,
+.sidebar GtkScrolledWindow {
+	background-color: /*@sidebar_bg*/#eee;
+	font:Bold;
+	color:#000;
+    /*font-family:FZXiangLi-S17S,regular;*/
+	box-shadow: 1px 2px 3px #333;
+	border-style:solid;
+	border-width:0 1px 0 0;
+	border-color:alpha (#eeeeee,0.6);
+}
+
+.sidebar .frame {
+	border-style:solid;
+	box-shadow: 1px 2px 3px #333;
+}
+.sidebar row {
+	background-color: #eee;
+    /*font-family:FZXiangLi-S17S,regular;*/
+	color: #333;
+	margin:5px 0px 5px 2px;
+	padding:5px 0px 5px 2px;
+	box-shadow:-1px 2px 3px #aaa;
+}
+.sidebar row:hover {
+	/*background-color: shade (@theme_bg_color, 0.95);*/
+	background-color:@tsingyi_side_bg_row;
+	color: #eee;
+	box-shadow: -1px 4px 5px #2fd8f0;
+	margin:9px 0px 9px 0px;
+}
+
+.sidebar .scrollbar.trough {
+	box-shadow: none;
+	border-radius: 100px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: transparent;
+}
+
+.sidebar .scrollbar.trough {
+	background-color: /*@sidebar_scrollbar_trough*/transparent;
+}
+
+.sidebar .scrollbar.slider {
+	background-color: @sidebar_bg;
+}
+
+.sidebar .scrollbar.slider:hover {
+	background-color: mix (@sidebar_bg, @theme_base_color, 0.35);
+}
+
+.sidebar .scrollbar.slider:hover:active {
+	background-color: @theme_base_color;
+}
+
+.sidebar .radio,
+.sidebar .radio:focus,
+.sidebar .radio:selected {
+	/*background-image: none;*/
+	background-color:yellow;
+}
+.sidebar-icon {
+	color:#2eb398;
+	padding-right:10px;
+	margin-right:10px;
 }

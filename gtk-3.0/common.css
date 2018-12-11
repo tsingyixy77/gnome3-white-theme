@@ -1,0 +1,35 @@
+/*Changed titbar color Fri Jun  3 08:53:54 CST 2016 */
+@define-color header_border_line #eee;
+@define-color header_border_line1 #23b398;
+@define-color header_face #fff;
+
+@define-color tsingyi_side_bg_row #90E8F4;
+@define-color tsingyi_side_fg_row #333;
+
+@define-color tsingyi_fg #333;
+@define-color tsingyi_bg #fff;
+
+@define-color tsingyi_sel_bg #31363D;
+@define-color tsingyi_sel_fg #fff;
+
+@define-color tsingyi_shadow #eee;
+@define-color tsingyi_btn #fff;
+
+@define-color titlebar_color #fff;
+@define-color bg_highlight_color #fff;
+@define-color text_color #ff0000;
+@define-color fg_color #333;
+@define-color base_color #FFF;
+@define-color bg_color shade (@base_color, 0.96);
+@define-color insensitive_color mix(@text_color, @bg_color, 0.6);
+@define-color menu_separator alpha (#000, 0.15);
+@define-color menu_separator_shadow alpha (#fff, 0.8);
+@define-color inset_dark_color alpha (#000, 0.06);
+@define-color selected_bg_color #3d9bda;
+@define-color selected_fg_color #FFF;
+@define-color colorAccent @selected_bg_color;
+@define-color bg_highlight_color #fff;
+@define-color text_shadow_color alpha (#fff, 0.4);
+@define-color border_color alpha (#cccccc,0.5);
+
+
