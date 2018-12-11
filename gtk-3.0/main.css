@@ -883,36 +883,39 @@ actionbar {
   border-top: 1px solid #dedede;
   background-color: alpha(#efefef, 0.00); }
 
+.titlebar .tweak-titlebar-left {
+	border:none;
+  background-image: linear-gradient(to bottom,
+                #eee 0%,
+                @header_face 20%,
+                @header_border_line);
+}
 headerbar,
 .titlebar:not(headerbar) {
-  /*min-height: 42px;*/
-  border-style:none;
-  /*border-color: #0c0f10;*/
+  border:none;
   color: #000;
-  /*background-color: #21262D;*/
   font-family:FZXiangLi-S17S,regular;
   font-size:18px;
-          background-image: linear-gradient(to bottom left,
+  background-image: linear-gradient(to bottom left,
                 @header_face_start 0%,
                 @header_face 20%,
                 @header_border_line);
-
-  /*box-shadow: 1px 4px 5px @header_box_shadow*/;/*huiquan modified*/
-  /*box-shadow: inset 0 0 #222a2d;*/
 	box-shadow: 1px 1px 2px @header_box_shadow;/*huiquan modified*/
+  border-color:@header_face;
+  border-image-width:0px;
    }
   .csd headerbar, .csd
-  .titlebar:not(headerbar) {
-  background-color: #21262D;
-  font-family:FZXiangLi-S17S,regular;
-  font-size:18px;
-    /*background-color: #1b2224;*/
-	background-image: linear-gradient(to bottom left,
+  .titlebar:not(headerbar) 
+  {
+    font-family:FZXiangLi-S17S,regular;
+    font-size:18px;
+    background-image: linear-gradient(to bottom left,
                 @header_face_start 0%,
                 @header_face 20%,
                 @header_border_line);
 	box-shadow: 1px 1px 2px @header_box_shadow;/*huiquan modified*/
-    border-color: #0c0f10; }
+  border-color:@header_face;
+    }
   headerbar .title,
   .titlebar:not(headerbar) .title {
     padding-left: 12px;
@@ -963,21 +966,25 @@ headerbar,
   .default-decoration.titlebar:not(headerbar), .csd
   .default-decoration.titlebar:not(headerbar),
   .default-decoration.titlebar:backdrop:not(headerbar), .csd
-  .default-decoration.titlebar:backdrop:not(headerbar) {
+  .default-decoration.titlebar:backdrop:not(headerbar) 
+  .default-decoration.titlebar:not(.tweak-titlebar-left)
+  {
     min-height: 22px;
     padding: 0 0px;
-    background-color: #21262D;
-	background-image: linear-gradient(to bottom left,
+    background-color: @header_face;
+    border-color:@header_face;
+	/*background-image: linear-gradient(to bottom left,
 	@header_face_start 0%,
    @header_face 20%,
    @header_border_line 100%
    );
+   */
 	box-shadow: 1px 1px 2px @header_box_shadow;/*;huiquan modified*/
   font-family:FZXiangLi-S17S,regular;
   font-size:18px;
-	border-radius:2px;
+	border:none;
 
-    border-bottom-width: 0; }
+    }
     .maximized headerbar.default-decoration, .maximized .csd headerbar.default-decoration, .maximized headerbar.default-decoration:backdrop, .maximized .csd headerbar.default-decoration:backdrop, .maximized
     .default-decoration.titlebar:not(headerbar), .maximized .csd
     .default-decoration.titlebar:not(headerbar), .maximized
@@ -1006,7 +1013,7 @@ window > .titlebar:not(headerbar), window > .titlebar:not(headerbar):backdrop, w
   border: none;
   box-shadow: none; }
 .titlebar:not(headerbar) > separator {
-  background-image: linear-gradient(to bottom, #0c0f10, #0c0f10); }
+  /*background-image: linear-gradient(to bottom, #0c0f10, #0c0f10);*/ }
 
 .primary-toolbar:not(.libreoffice-toolbar) separator, headerbar separator.titlebutton,
 .titlebar:not(headerbar) separator.titlebutton {
@@ -2449,7 +2456,7 @@ scrolledwindow junction {
     border-image-slice: 0 1 0 0; }
 
 separator {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: @header_face;
   min-width: 1px;
   min-height: 1px; }
 
