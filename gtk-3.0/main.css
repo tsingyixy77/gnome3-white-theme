@@ -716,7 +716,7 @@ modelbutton.flat {
   border-radius: 2px; }
   menuitem.button.flat:hover,
   modelbutton.flat:hover {
-    background-color: alpha(@header_border_line1, 0.90); }
+    background-color: alpha(@header_face_start, 0.90); }
   menuitem.button.flat:checked,
   modelbutton.flat:checked {
     color: #1b2224; }
@@ -892,11 +892,9 @@ headerbar,
   /*background-color: #21262D;*/
   font-family:FZXiangLi-S17S,regular;
   font-size:18px;
-          background-image: linear-gradient(to bottom,
-                @header_border_line1 0%,
-                @header_border_line1 16%,
-                @header_border_line 16%,
-                @header_face 10%,
+          background-image: linear-gradient(to bottom left,
+                @header_face_start 0%,
+                @header_face 20%,
                 @header_border_line);
 
   /*box-shadow: 1px 4px 5px @header_box_shadow*/;/*huiquan modified*/
@@ -909,11 +907,9 @@ headerbar,
   font-family:FZXiangLi-S17S,regular;
   font-size:18px;
     /*background-color: #1b2224;*/
-	background-image: linear-gradient(to bottom,
-                @header_border_line1 0%,
-                @header_border_line1 16%,
-                @header_border_line 16%,
-                @header_face 10%,
+	background-image: linear-gradient(to bottom left,
+                @header_face_start 0%,
+                @header_face 20%,
                 @header_border_line);
 	box-shadow: 1px 1px 2px @header_box_shadow;/*huiquan modified*/
     border-color: #0c0f10; }
@@ -971,11 +967,9 @@ headerbar,
     min-height: 22px;
     padding: 0 0px;
     background-color: #21262D;
-	background-image: linear-gradient(to bottom,
-	@header_border_line1 0%,
-	@header_border_line1 16%,
-	@header_border_line 16%,
-   @header_face 10%,
+	background-image: linear-gradient(to bottom left,
+	@header_face_start 0%,
+   @header_face 20%,
    @header_border_line 100%
    );
 	box-shadow: 1px 1px 2px @header_box_shadow;/*;huiquan modified*/
@@ -3846,7 +3840,7 @@ iconview.source-list {
   color: transparent; }
 
 .source-list.view:hover, iconview.source-list:hover {
-  background-color:@header_border_line1; 
+  background-color:@header_face_start; 
   font-weight:bold;
   }
 
@@ -4335,7 +4329,7 @@ filechooser placessidebar.sidebar scrollbar,
 @define-color wm_icon_hover_bg #7a8b88;
 @define-color wm_icon_active_bg #ffffff;
 @define-color header_border_line alpha(#fff,0.8);
-@define-color header_border_line1 #2eb398;
+@define-color header_face_start #2eb398;
 @define-color header_face alpha(#fff, 0.88);
 @define-color header_box_shadow #aaa;
 
