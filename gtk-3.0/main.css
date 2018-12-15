@@ -13,7 +13,7 @@
   -GtkWidget-text-handle-height: 20;
   -GtkDialog-button-spacing: 4;
   -GtkDialog-action-area-border: 0;
-  outline-color: alpha(currentColor,0.3);
+  outline-color: alpha(currentColor,0.0);
   outline-style: dashed;
   outline-offset: -3px;
   outline-width: 1px;
@@ -21,7 +21,7 @@
 
 .background {
   color: #11161D;
-  background-color: alpha(#fff, 0.95); }
+  background-color: alpha(#fff, 1); }
 
 *:disabled {
   -gtk-icon-effect: dim; }
@@ -911,6 +911,7 @@ headerbar,
                 @header_face_start 0%,
                 @header_face 20%,
                 @header_border_line);
+                border:none;
     }
   headerbar .title,
   .titlebar:not(headerbar) .title {
@@ -1138,7 +1139,7 @@ headerbar .linked:not(.vertical).path-bar > button {
     animation: header_ripple_effect 0.3s cubic-bezier(0, 0, 0.2, 1);
     color: #11161D;
     font-weight:bold;
-    background-color: #ccc;
+    background-color: #2eb398;
     box-shadow: 0 3px #45cfb3; }
   .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:disabled, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:disabled,
   .primary-toolbar .linked:not(.vertical).path-bar > button:disabled,
@@ -1487,7 +1488,7 @@ menubar,
 .menubar {
   -GtkWidget-window-dragging: true;
   padding: 0px;
-  background-color: #efefef;
+  background-color: #fff;
   color: #11161D; }
   menubar:backdrop,
   .menubar:backdrop {
@@ -2573,7 +2574,7 @@ filechooser #pathbarbox {
 filechooserbutton:drop(active) {
   box-shadow: none;
   border-color: transparent; }
-
+/*
 .sidebar {
   border-style: none;
   background-color: #f7f7f7; }
@@ -2587,7 +2588,7 @@ filechooserbutton:drop(active) {
     background-color: transparent; }
   paned .sidebar.left, paned .sidebar.right, paned .sidebar.left:dir(rtl), paned .sidebar:dir(rtl), paned .sidebar:dir(ltr), paned .sidebar {
     border-style: none; }
-
+*/
 stacksidebar row {
   padding: 4px 4px; }
   stacksidebar row > label {
@@ -4352,8 +4353,8 @@ filechooser placessidebar.sidebar scrollbar,
     /*font-family:FZXiangLi-S17S,regular;*/
 	box-shadow: 1px 2px 3px #333;
 	border-style:solid;
-	border-width:0 1px 0 0;
-	border-color:alpha (#fff,0.6);
+	border-width:0 5px 0 0;
+	border-color:#eee;
 }
 
 .sidebar .frame {
