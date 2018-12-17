@@ -81,10 +81,17 @@ label selection {
 label:disabled {
   color: rgba(27, 34, 36, 0.55); }
 
-.dim-label, label.separator, popover label.separator,
+label.separator, popover label.separator,
 popover.background label.separator, headerbar .subtitle,
 .titlebar:not(headerbar) .subtitle {
   opacity: 0.55; }
+.path-bar .dim-label {
+	border-style:inset;
+	border-bottom-color:#ff0000;
+	border-bottom-width:3px;
+	margin-bottom:2px;
+	margin-top:2px;
+}
 
 assistant .sidebar {
   background-color: alpha(#ffffff, 0.8);
@@ -254,7 +261,7 @@ button {
   button.flat, button.sidebar-button {
     box-shadow: 1px 2px 2px alpha(#ccc,0.16);
     border-bottom-width:3px;
-    border-bottom-color: #aaa;
+    border-bottom-color: #ff0000;
     background-color: alpha(#fff,0.00);
     transition: none; }
     button.flat:hover, button.sidebar-button:hover {
@@ -1068,7 +1075,7 @@ window > .titlebar:not(headerbar), window > .titlebar:not(headerbar):backdrop, w
       color: #FC4138; }
 .primary-toolbar button, headerbar button {
   color: #333; /*header bar image button*/
-  border: none;
+  border-style :inset;
   background-color: transparent; 
   }
   .primary-toolbar button:backdrop, headerbar button:backdrop {
@@ -1082,7 +1089,7 @@ window > .titlebar:not(headerbar), window > .titlebar:not(headerbar):backdrop, w
   .primary-toolbar button:active, headerbar button:active, .primary-toolbar button:checked, headerbar button:checked {
     transition: 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
     color: #ffffff;
-	  border-bottom-color: #ffeeaa;
+	  border-bottom-color: #ff0000;
 	  border-bottom-width: 5px;
 	  box-shadow: inset 1px 2px 3px #aaa;
     background-color: #2eb398;
