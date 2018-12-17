@@ -968,15 +968,10 @@ headerbar,
   {
     min-height: 22px;
     padding: 0 0px;
-    background-color: @header_face;
-    border-color:@header_face;
-	/*background-image: linear-gradient(to bottom left,
-	@header_face_start 0%,
-   @header_face 20%,
-   @header_border_line 100%
-   );
-   */
-	box-shadow: 1px 1px 2px @header_box_shadow;/*;huiquan modified*/
+  background-image: linear-gradient(to bottom,
+                @header_face_start 0%,
+                @header_face 20%,
+                @header_border_line);
   font-family:FZXiangLi-S17S,regular;
   font-size:18px;
 	border:none;
