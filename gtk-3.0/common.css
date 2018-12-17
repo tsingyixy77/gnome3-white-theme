@@ -2,6 +2,7 @@
 @define-color header_border_line #eee;
 @define-color header_face_start #23b398;
 @define-color header_face #fff;
+@define-color header_face_pink #33b4aa;
 
 @define-color tsingyi_side_bg_row #90E8F4;
 @define-color tsingyi_side_fg_row #333;
