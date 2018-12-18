@@ -87,8 +87,6 @@ popover.background label.separator, headerbar .subtitle,
   opacity: 0.55; }
 .path-bar .dim-label {
 	border-style:inset;
-	border-bottom-color:#ff0000;
-	border-bottom-width:3px;
 	margin-bottom:2px;
 	margin-top:2px;
 }
@@ -1075,7 +1073,7 @@ window > .titlebar:not(headerbar), window > .titlebar:not(headerbar):backdrop, w
       color: #FC4138; }
 .primary-toolbar button, headerbar button {
   color: #333; /*header bar image button*/
-  border-style :inset;
+  border-style : none;
   background-color: transparent; 
   }
   .primary-toolbar button:backdrop, headerbar button:backdrop {
@@ -1349,7 +1347,7 @@ headerbar spinbutton:not(.vertical) > entry + button:not(:active):hover {
 .primary-toolbar switch:backdrop, headerbar switch:backdrop {
   opacity: 0.75; }
 .primary-toolbar progressbar trough, headerbar progressbar trough {
-  background-color: #050607; }
+  background-color: #aaa; }
 .primary-toolbar progressbar:backdrop, headerbar progressbar:backdrop {
   opacity: 0.75; }
 .primary-toolbar scale:backdrop, headerbar scale:backdrop {
@@ -1367,7 +1365,7 @@ headerbar spinbutton:not(.vertical) > entry + button:not(:active):hover {
     background-color: #b9bbbb;
     border-color: rgba(27, 34, 36, 0.5); }
 .primary-toolbar scale trough, headerbar scale trough {
-  background-color: #050607; }
+  background-color: #aaa; }
   .primary-toolbar scale trough:disabled, headerbar scale trough:disabled {
     background-color: rgba(5, 6, 7, 0.00); }
 
@@ -1447,7 +1445,7 @@ treeview.view {
     border-width: 0; }
     treeview.view.trough:selected, treeview.view.trough:selected:focus {
       color: #ffffff;
-      background-color: rgba(0, 0, 0, 0.2);
+      background-color: #aaa;
       border-radius: 3px;
       border-width: 0; }
   treeview.view header button {
@@ -1792,7 +1790,7 @@ notebook {
           background-color: #e3e3e3; }
 
 scrollbar {
-  background-color:#11161D;
+  background-color:alpha(#23b398, 0.6);
   /*transition: 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94); */
    * }
   * {
@@ -1818,7 +1816,7 @@ scrollbar {
     border-left: 1px solid #dedede; }
 	*/
   scrollbar button {
-    border: none; }
+    border:solid; }
 	/*
   scrollbar.vertical button.down {
     -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
@@ -4384,16 +4382,16 @@ filechooser placessidebar.sidebar scrollbar,
 	box-shadow: none;
 	border-radius: 100px;
 	border-style: solid;
-	border-width: 2px;
+	border-width: 4px;
 	border-color: transparent;
 }
 
 .sidebar .scrollbar.trough {
-	background-color: /*@sidebar_scrollbar_trough*/transparent;
+	background-color: /*@sidebar_scrollbar_trough*/#eee;
 }
 
 .sidebar .scrollbar.slider {
-	background-color: @sidebar_bg;
+	background-color: #ff0000;
 }
 
 .sidebar .scrollbar.slider:hover {
