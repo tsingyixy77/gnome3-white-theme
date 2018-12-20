@@ -546,7 +546,7 @@ StScrollBar {
 .popup-menu {
   min-width: 200px; }
   .popup-menu .popup-sub-menu {
-    background-color: rgba(50, 180, 160, 0.7);
+    background-color: rgba(50, 180, 160, 0.74);
     box-shadow: 1px 7px 5px #eee; 
     padding-top: 8px;
     padding-bottom: 8px;
@@ -616,19 +616,16 @@ StScrollBar {
   -arrow-rise: 0;
   -arrow-box-shadow: none;
   margin: 5px 8px 8px;
-  /*background-color: #16111D;*/
-  color:#000;
-  background-color: rgba(255,255,255,0.6);
+  background-color: #16111D;
   border-radius: 2px;
   /*box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.24), 0 3px 3px rgba(0, 0, 0, 0.345); }*/
-  /*box-shadow:1px 1px 5px #2eb398;*/
-  box-shadow: 1px 2px 5px #aaa;
+  box-shadow:1px 1px 5px #2eb398;
   }
 
 .popup-separator-menu-item {
   height: 0.01em;
   margin: 1px 1px;
-  background-color: rgba(255, 255, 255, 0.4);;
+  background-color: #21262D;
   /*border-color: rgba(255, 255, 255, 0.4);*/
   /*box-shadow:-1px 4px 5px #880730;
   border-bottom-width: 1px;
@@ -756,14 +753,12 @@ StScrollBar {
 
 /* TOP BAR */
 #panel {
-  background-color: rgba(214,214,214, 0.0);
- /*background-image: linear-gradient(red, yellow, blue, green);*/
-  /*	background-color:rgba(234,234,234, 0);*/
+  background-color: rgba(17,04,30, 0.821);
   font-weight: bold;
   height: 28px;
-  box-shadow: 1px 2px 2px #aaaaaa; }
+  box-shadow: -1px 4px 5px #170430; }
   #panel:overview, #panel.unlock-screen, #panel.login-screen, #panel.lock-screen {
-    background-color: rgba(17,04,30, 0.0); }
+    background-color: rgba(17,04,30, 0.821); }
   #panel #panelLeft, #panel #panelCenter {
     spacing: 0; }
   #panel .panel-corner {
@@ -1159,9 +1154,8 @@ StScrollBar {
   width: 16px;
   height: 16px; }
 
-.popup-menu-icon { /*volume bar*/
+.popup-menu-icon {
   icon-size: 1.23077em; 
-  color: #11161D;
   }
 
 .window-close {
