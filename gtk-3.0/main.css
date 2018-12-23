@@ -21,7 +21,7 @@
 
 .background {
   color: #11161D;
-  background-color: alpha(#fff, 1); }
+  background-color: alpha(#fff, 1.0); }
 
 *:disabled {
   -gtk-icon-effect: dim; }
@@ -85,11 +85,6 @@ label.separator, popover label.separator,
 popover.background label.separator, headerbar .subtitle,
 .titlebar:not(headerbar) .subtitle {
   opacity: 0.55; }
-.path-bar .dim-label {
-	border-style:inset;
-	margin-bottom:2px;
-	margin-top:2px;
-}
 
 assistant .sidebar {
   background-color: alpha(#ffffff, 0.8);
@@ -140,6 +135,13 @@ entry {
   border-color: #cfd6e6;
   background-color: alpha(#ffffff, 0.00); }
   entry.search {
+  	  border-style:solid;
+  	  border-bottom-color:#2eb398;
+  	  border-bottom-width:2px;
+  	  border-bottom-left:0px;
+  	  border-bottom-right:0px;
+  	  border-bottom-top:0px;
+  	  background-color:#fff;
     border-radius: 20px; }
   entry image {
     color: #494e50; }
@@ -258,8 +260,8 @@ button {
     margin: 4px 1px; }
   button.flat, button.sidebar-button {
     box-shadow: 1px 2px 2px alpha(#ccc,0.16);
-    border-bottom-width:3px;
-    border-bottom-color: #ff0000;
+    /*border-bottom-color: #2eb398;*/
+    border-style: solid;
     background-color: alpha(#fff,0.00);
     transition: none; }
     button.flat:hover, button.sidebar-button:hover {
@@ -902,7 +904,7 @@ headerbar,
 .titlebar:not(headerbar) {
   border:none;
   color: #000;
-  font-family:FZXiangLi-S17S,regular;
+  font-family:FZXiangLi-S17S,Regular;
   font-size:18px;
   background-image: linear-gradient(to bottom,
                 @header_face_start 0%,
@@ -912,7 +914,7 @@ headerbar,
   .csd headerbar, .csd
   .titlebar:not(headerbar) 
   {
-    font-family:FZXiangLi-S17S,regular;
+    font-family:FZXiangLi-S17S,Regular;
     font-size:18px;
     background-image: linear-gradient(to bottom,
                 @header_face_start 0%,
@@ -979,7 +981,7 @@ headerbar,
                 @header_face_start 0%,
                 @header_face 20%,
                 @header_border_line);
-  font-family:FZXiangLi-S17S,regular;
+  font-family:FZXiangLi-S17S,Regular;
   font-size:18px;
 	border:none;
 
@@ -1087,8 +1089,11 @@ window > .titlebar:not(headerbar), window > .titlebar:not(headerbar):backdrop, w
   .primary-toolbar button:active, headerbar button:active, .primary-toolbar button:checked, headerbar button:checked {
     transition: 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
     color: #ffffff;
-	  border-bottom-color: #ff0000;
+    /*
+	  border-bottom-color: #2eb398;
 	  border-bottom-width: 5px;
+	  border-style:inset;
+	  */
 	  box-shadow: inset 1px 2px 3px #aaa;
     background-color: #2eb398;
     background-clip: border-box; }
@@ -1121,16 +1126,16 @@ headerbar .linked:not(.vertical):not(.path-bar) > button:not(:checked):not(:acti
 .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button,
 .primary-toolbar .linked:not(.vertical).path-bar > button,
 headerbar .linked:not(.vertical).path-bar > button {
-  margin: 0 0 3px 0;
+  margin: 6px 0 3px 0;
   color: #11161D;
-  border-top-color: #2eb398;
-  border-top-width: 5px;
-  background-color: #f2f2f2; }
+  border-right-color: #fefefe;
+  border-right-width: 1px;
+  background-color: #fff; }
   .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover,
   .primary-toolbar .linked:not(.vertical).path-bar > button:hover,
   headerbar .linked:not(.vertical).path-bar > button:hover {
-    color: #ddd;
-    background-color: #aaa; }
+    color: #fff;
+    background-color: #2eb398; }
   .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:active, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:active, .primary-toolbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked, headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked,
   .primary-toolbar .linked:not(.vertical).path-bar > button:active,
   headerbar .linked:not(.vertical).path-bar > button:active,
@@ -1224,7 +1229,10 @@ headerbar .linked:not(.vertical):not(.path-bar) > button:checked + entry {
   background-clip: border-box;
   color: #2eb398;
   background-color: transparent;
-  /*border-color: #23b398;*/ }
+  border-color: #23b398;
+  border-style:solid;
+  border-width: 1px;
+  }
   .primary-toolbar button.suggested-action.flat, headerbar button.suggested-action.flat, .primary-toolbar button.suggested-action.sidebar-button, headerbar button.suggested-action.sidebar-button {
     border-color: transparent;
     background-color: transparent;
@@ -4412,4 +4420,17 @@ filechooser placessidebar.sidebar scrollbar,
 	color:#2eb398;
 	padding-right:10px;
 	margin-right:10px;
+}
+/*path-bar*/
+.path-bar .dim-label {
+	border-style:inset;
+	border-bottom-color:#21262D;
+	border-bottom-width:5px;
+	margin-bottom:2px;
+	margin-top:2px;
+}
+.path-bar .text-button {
+	border-bottom-color:#21262D;
+	border-style:inset;
+    border-bottom-width:5px;
 }

@@ -1,5 +1,5 @@
 /*Changed titbar color Fri Jun  3 08:53:54 CST 2016 */
-@define-color header_border_line #fff;
+@define-color header_border_line alpha(#fff, 1);
 @define-color header_face_start #23b398;
 @define-color header_face #fff;
 
